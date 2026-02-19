@@ -472,22 +472,22 @@
         }
 
         .timeline-item {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 0 2rem;
-            position: relative;
-            margin-bottom: 3rem;
-        }
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 0 2.5rem;
+      position: relative;
+      margin-bottom: 3rem;
+    }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 130px;
-            top: 0;
-            bottom: -3rem;
-            width: 1px;
-            background: linear-gradient(180deg, var(--accent), var(--border));
-        }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 110px;
+      top: 0; 
+      bottom: -3rem;
+      width: 1px;
+      background: linear-gradient(180deg, var(--accent), var(--border));
+    }
 
         .timeline-item:last-child::before {
             bottom: 0;
@@ -502,16 +502,15 @@
         }
 
         .timeline-dot {
-            position: absolute;
-            left: 124px;
-            top: 4px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: var(--accent);
-            border: 3px solid var(--bg);
-            box-shadow: 0 0 0 1px var(--accent);
-        }
+      position: absolute;
+      left: 109px; top: 12px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 1px var(--accent);
+      z-index: 5;
+    }
 
         .timeline-content {
             background: var(--bg2);
@@ -921,9 +920,12 @@
             }
 
             .timeline-date {
-                text-align: left;
-                padding-top: 0;
-                margin-bottom: 0.5rem;
+                font-size: 0.72rem;
+                color: var(--text);
+                text-align: right;
+                padding-top: 0.2rem;
+                line-height: 1.6;
+                font-weight: 500;
             }
 
             .timeline-dot {
@@ -931,6 +933,61 @@
             }
 
             nav .nav-links {
+                display: none;
+            }
+
+            /* Better mobile spacing */
+            section {
+                padding: 60px 1.5rem 40px;
+            }
+
+            .hero-inner {
+                padding: 0 1.5rem !important;
+            }
+
+            /* Smaller hero text on mobile */
+            .hero-name {
+                font-size: clamp(2.5rem, 10vw, 4rem) !important;
+            }
+
+            .terminal-body {
+                padding: 1.5rem;
+            }
+
+            /* Stack buttons vertically */
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Better card spacing */
+            .skill-cat,
+            .timeline-content,
+            .project-body {
+                padding: 1.25rem;
+            }
+
+            /* Adjust contact box */
+            .contact-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+            }
+
+            .contact-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Hide custom cursor on mobile */
+            .cursor,
+            .cursor-ring {
                 display: none;
             }
         }
@@ -1265,7 +1322,8 @@
                 <a href="mailto:sruthiravi145@gmail.com" class="contact-link">
                     ✉ sruthiravi145@gmail.com
                 </a>
-                <a href="https://www.linkedin.com/in/sruthi-ravichandran-7306641ba/" target="_blank" class="contact-link">
+                <a href="https://www.linkedin.com/in/sruthi-ravichandran-7306641ba/" target="_blank"
+                    class="contact-link">
                     in LinkedIn
                 </a>
                 <a href="https://github.com/SRUTHI-453" target="_blank" class="contact-link">
