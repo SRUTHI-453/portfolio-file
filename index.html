@@ -472,22 +472,22 @@
         }
 
         .timeline-item {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 0 2.5rem;
-      position: relative;
-      margin-bottom: 3rem;
-    }
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 0 2.5rem;
+            position: relative;
+            margin-bottom: 3rem;
+        }
 
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: 110px;
-      top: 0; 
-      bottom: -3rem;
-      width: 1px;
-      background: linear-gradient(180deg, var(--accent), var(--border));
-    }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 110px;
+            top: 0;
+            bottom: -3rem;
+            width: 1px;
+            background: linear-gradient(180deg, var(--accent), var(--border));
+        }
 
         .timeline-item:last-child::before {
             bottom: 0;
@@ -502,15 +502,17 @@
         }
 
         .timeline-dot {
-      position: absolute;
-      left: 109px; top: 12px;
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid var(--bg);
-      box-shadow: 0 0 0 1px var(--accent);
-      z-index: 5;
-    }
+            position: absolute;
+            left: 109px;
+            top: 12px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--bg);
+            box-shadow: 0 0 0 1px var(--accent);
+            z-index: 5;
+        }
 
         .timeline-content {
             background: var(--bg2);
@@ -827,10 +829,12 @@
 
         .contact-tagline {
             font-family: 'Syne', sans-serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.2rem, 5vw, 1.8rem);
+            /* was fixed 1.8rem */
             font-weight: 800;
             color: var(--text-bright);
             margin-bottom: 0.75rem;
+            word-break: break-word;/* ← prevents overflow */
         }
 
         .contact-tagline span {
