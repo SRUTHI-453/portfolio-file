@@ -2,7 +2,7 @@
 
 Personal portfolio website built with HTML, CSS & JavaScript.
 
-🔗 Live: https://portfolio-file-sruthi.vercel.app/
+🔗 Live: https://portfolio-sruthi.vercel.app/
 
 ## Tech Used
 - HTML5
